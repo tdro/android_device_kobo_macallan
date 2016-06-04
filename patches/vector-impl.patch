@@ -1,0 +1,27 @@
+--- a/system/core/libutils/VectorImpl.cpp
++++ b/system/core/libutils/VectorImpl.cpp
+@@ -563,6 +563,24 @@
+ void VectorImpl::reservedVectorImpl8() { }
+ #endif
+ 
++extern "C" void _ZN7android10VectorImpl19reservedVectorImpl1Ev() { }
++extern "C" void _ZN7android10VectorImpl19reservedVectorImpl2Ev() { }
++extern "C" void _ZN7android10VectorImpl19reservedVectorImpl3Ev() { }
++extern "C" void _ZN7android10VectorImpl19reservedVectorImpl4Ev() { }
++extern "C" void _ZN7android10VectorImpl19reservedVectorImpl5Ev() { }
++extern "C" void _ZN7android10VectorImpl19reservedVectorImpl6Ev() { }
++extern "C" void _ZN7android10VectorImpl19reservedVectorImpl7Ev() { }
++extern "C" void _ZN7android10VectorImpl19reservedVectorImpl8Ev() { }
++
++extern "C" void _ZN7android16SortedVectorImpl25reservedSortedVectorImpl1Ev() { }
++extern "C" void _ZN7android16SortedVectorImpl25reservedSortedVectorImpl2Ev() { }
++extern "C" void _ZN7android16SortedVectorImpl25reservedSortedVectorImpl3Ev() { }
++extern "C" void _ZN7android16SortedVectorImpl25reservedSortedVectorImpl4Ev() { }
++extern "C" void _ZN7android16SortedVectorImpl25reservedSortedVectorImpl5Ev() { }
++extern "C" void _ZN7android16SortedVectorImpl25reservedSortedVectorImpl6Ev() { }
++extern "C" void _ZN7android16SortedVectorImpl25reservedSortedVectorImpl7Ev() { }
++extern "C" void _ZN7android16SortedVectorImpl25reservedSortedVectorImpl8Ev() { }
++
+ /*****************************************************************************/
+ 
+ SortedVectorImpl::SortedVectorImpl(size_t itemSize, uint32_t flags)

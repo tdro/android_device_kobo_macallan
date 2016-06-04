@@ -1,0 +1,6 @@
+This is a cut down version of the powerHAL used by the Nvidia Shield stock ROMs.
+
+It is based on the code at:
+http://nv-tegra.nvidia.com/gitweb/?p=tegra/prebuilts-device-nvidia.git;a=tree;f=common/power;h=6a91f460f71dd08c0e41af7b784e4c3492d64fac;hb=rel-st8-l-r6-partner
+
+Some code from foster has been backported and one part from roth was forward ported. All three generations are supported.
