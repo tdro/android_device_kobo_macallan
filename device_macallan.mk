@@ -37,6 +37,10 @@ PRODUCT_COPY_FILES += \
 PRODUCT_COPY_FILES += \
 	device/kobo/macallan/adb_keys:root/adb_keys
 
+# Audio Override
+PRODUCT_COPY_FILES_OVERRIDES := \
+	system/etc/audio_policy.conf
+
 # Hardware Specific Features
 PRODUCT_COPY_FILES += \
 	frameworks/native/data/etc/tablet_core_hardware.xml:system/etc/permissions/tablet_core_hardware.xml \
