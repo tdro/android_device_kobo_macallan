@@ -28,11 +28,6 @@ system/lib/libnvomxadaptor.so
 system/lib/libnvmm.so
 system/lib/libnvodm_query.so
 system/lib/libnvos.so
-system/lib/soundfx/libreverbwrapper.so
-system/lib/soundfx/libvisualizer.so
-system/lib/soundfx/libdownmix.so
-system/lib/soundfx/libbundlewrapper.so
-system/lib/soundfx/libaudiopreprocessing.so
 system/lib/hw/ts.default.so
 system/lib/hw/audio.primary.tegra.so
 system/lib/hw/hwcomposer.tegra.so
@@ -120,7 +115,6 @@ system/lib/librm31080.so
 system/vendor/lib/libWVStreamControlAPI_L1.so
 system/vendor/lib/libwvm.so
 system/vendor/lib/drm/libdrmwvmplugin.so
-system/vendor/lib/libbt-vendor.so
 system/vendor/lib/libwvdrm_L1.so
 system/vendor/firmware/bcm43241/fw_bcmdhd_p2p.bin
 system/vendor/firmware/bcm43241/fw_bcmdhd.bin
@@ -166,7 +160,6 @@ system/etc/nvram_43241_AU.txt
 system/etc/bluetooth/bt_vendor.conf
 system/etc/bluetooth/bt_stack.conf
 system/etc/bluetooth/auto_pair_devlist.conf
-system/etc/bluetooth/ble_stack.conf
 system/etc/bluetooth/bt_did.conf
 system/etc/nvram_43241_JP.txt
 system/etc/nvaudio_conf.xml
