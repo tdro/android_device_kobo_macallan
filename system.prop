@@ -1,4 +1,36 @@
 
-#
-# system.prop for macallan
-#
+# Wifi
+wifi.interface=wlan0
+ap.interface=wlan0
+ro.carrier=wifi-only
+
+# Graphics
+ro.sf.override_null_lcd_density = 1
+persist.tegra.compositor=glcomposer
+debug.hwui.render_dirty_regions=false
+persist.tegra.nvmmlite = 1
+ro.streaming.video.drs=true
+ro.sf.lcd_density=320
+ro.zygote.disable_gl_preload=true
+
+# Other
+drm.service.enabled=true
+debug.nfc.fw_download=false
+debug.nfc.se=false
+tf.enable=y
+
+# USB Settings
+persist.sys.isUsbOtgEnabled=1
+
+# Parameters
+ro.hwui.texture_cache_size=72.0
+ro.hwui.layer_cache_size=48.0
+ro.hwui.gradient_cache_size=1.0
+ro.hwui.path_cache_size=40.0
+ro.hwui.shape_cache_size=5.0
+ro.hwui.drop_shadow_cache_size=6.0
+ro.hwui.text_small_cache_width=1024
+ro.hwui.text_small_cache_height=1024
+ro.hwui.text_large_cache_width=2048
+ro.hwui.text_large_cache_height=1024
+ro.hwui.texture_cache_flushrate=0.4

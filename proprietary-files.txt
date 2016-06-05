@@ -145,7 +145,6 @@ system/etc/nvcamera.conf
 system/etc/enctune.conf
 system/etc/asound.conf
 system/etc/nvram_43241_US.txt
-system/etc/vold.fstab
 system/etc/audioConfig_qvoice_icera_pc400.xml
 system/etc/nvram_43241_ALL.txt
 system/etc/nvram_43241_EVT.txt

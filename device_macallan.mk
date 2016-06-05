@@ -66,23 +66,6 @@ PRODUCT_COPY_FILES += \
 PRODUCT_DEFAULT_PROPERTY_OVERRIDES += \
 	persist.sys.usb.config=mtp,adb
 
-# Property Overrides
-PRODUCT_PROPERTY_OVERRIDES += \
-	wifi.interface=wlan0 \
-	ap.interface=wlan0 \
-	ro.carrier=wifi-only \
-	ro.sf.override_null_lcd_density = 1 \
-	persist.tegra.compositor=glcomposer \
-	debug.hwui.render_dirty_regions=false \
-	persist.tegra.nvmmlite = 1 \
-	drm.service.enabled=true \
-	ro.streaming.video.drs=true \
-	ro.sf.lcd_density=320 \
-	ro.zygote.disable_gl_preload=true \
-	debug.nfc.fw_download=false \
-	debug.nfc.se=false \
-	tf.enable=y
-	
 # Wifi Tools
 PRODUCT_PACKAGES += \
 	libwpa_client \
