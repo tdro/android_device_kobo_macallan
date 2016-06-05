@@ -39,7 +39,9 @@ PRODUCT_COPY_FILES += \
 
 # Audio Override
 PRODUCT_COPY_FILES_OVERRIDES := \
-	system/etc/audio_policy.conf
+	system/etc/audio_policy.conf \
+	system/etc/media_codecs.xml \
+	system/etc/media_profiles.xml
 
 # Hardware Specific Features
 PRODUCT_COPY_FILES += \
