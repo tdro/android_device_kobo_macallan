@@ -1,3 +1,4 @@
+system/media/bootanimation.zip
 system/lib/libnvodm_imager.so
 system/lib/libnvremoteprotocol.so
 system/lib/libnvcap_video.so
