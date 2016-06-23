@@ -41,7 +41,7 @@ BOARD_EGL_CFG := device/kobo/macallan/egl.cfg
 USE_OPENGL_RENDERER := true
 
 # PowerHAL
-TARGET_POWERHAL_VARIANT := tegra
+TARGET_POWERHAL_VARIANT := macallan
 
 # Partition
 BOARD_FLASH_BLOCK_SIZE := 131072

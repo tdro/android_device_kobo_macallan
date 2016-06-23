@@ -28,11 +28,11 @@ static void set_interactive_governor(int mode);
 
 static const interactive_data_t interactive_data_array[] =
 {
-    { "1122000", "65 304000:75 1122000:80", "19000", "20000", "0", "41000", "90" },
-    { "1020000", "65 256000:75 1020000:80", "41000", "20000", "0", "30000", "99" },
-    { "640000", "65 256000:75 640000:80", "80000", "20000", "2", "30000", "99" },
-    { "1020000", "65 256000:75 1020000:80", "41000", "20000", "0", "30000", "99" },
-    { "420000", "80",                     "80000", "300000","2", "30000", "99" }
+    { "1122000", "65 304000:75 1122000:80", "19000", "20000", "41000", "90" },
+    { "1020000", "65 256000:75 1020000:80", "41000", "20000", "30000", "99" },
+    { "640000", "65 256000:75 640000:80", "80000", "20000", "30000", "99" },
+    { "1020000", "65 256000:75 1020000:80", "41000", "20000", "30000", "99" },
+    { "420000", "80",                     "80000", "300000", "30000", "99" }
 };
 #endif
 
@@ -349,7 +349,6 @@ void common_power_set_interactive(__attribute__ ((unused)) struct power_module *
     sysfs_write("/sys/devices/system/cpu/cpufreq/interactive/target_loads", (on == 0)?"45 312000:75 564000:85":"65 228000:75 624000:85");
     sysfs_write("/sys/devices/system/cpu/cpufreq/interactive/above_hispeed_delay", (on == 0)?"80000":"19000");
     sysfs_write("/sys/devices/system/cpu/cpufreq/interactive/timer_rate", (on == 0)?"300000":"20000");
-    sysfs_write("/sys/devices/system/cpu/cpufreq/interactive/boost_factor", (on == 0)?"2":"0");
 #endif
 }
 
@@ -391,8 +390,6 @@ static void set_interactive_governor(int mode)
             interactive_data_array[mode].above_hispeed_delay);
     __sysfs_write("/sys/devices/system/cpu/cpufreq/interactive/timer_rate",
             interactive_data_array[mode].timer_rate);
-    __sysfs_write("/sys/devices/system/cpu/cpufreq/interactive/boost_factor",
-            interactive_data_array[mode].boost_factor);
     __sysfs_write("/sys/devices/system/cpu/cpufreq/interactive/min_sample_time",
             interactive_data_array[mode].min_sample_time);
     __sysfs_write("/sys/devices/system/cpu/cpufreq/interactive/go_hispeed_load",

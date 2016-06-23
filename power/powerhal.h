@@ -70,7 +70,6 @@ typedef struct interactive_data {
     const char *target_loads;
     const char *above_hispeed_delay;
     const char *timer_rate;
-    const char *boost_factor;
     const char *min_sample_time;
     const char *go_hispeed_load;
 } interactive_data_t;

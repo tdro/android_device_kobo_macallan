@@ -12,7 +12,7 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-ifeq ($(TARGET_POWERHAL_VARIANT),tegra)
+ifeq ($(TARGET_POWERHAL_VARIANT),macallan)
 
 LOCAL_PATH := $(call my-dir)
 
@@ -35,14 +35,14 @@ ifneq ($(filter foster,$(TARGET_DEVICE)),)
     LOCAL_CFLAGS += -DPOWER_MODE_SET_INTERACTIVE
 endif
 
-LOCAL_MODULE_PATH := $(TARGET_OUT_SHARED_LIBRARIES)/hw
+LOCAL_MODULE_PATH := $(TARGET_OUT_VENDOR_SHARED_LIBRARIES)/hw
 
 LOCAL_SHARED_LIBRARIES := liblog libcutils libutils libdl
 
-LOCAL_MODULE := power.$(TARGET_BOARD_PLATFORM)
+LOCAL_MODULE := power.macallan
 
 LOCAL_MODULE_TAGS := optional
 
 include $(BUILD_SHARED_LIBRARY)
 
-endif # TARGET_POWERHAL_VARIANT == tegra
+endif # TARGET_POWERHAL_VARIANT == macallan
