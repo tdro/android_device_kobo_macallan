@@ -115,7 +115,10 @@ system/lib/libmllite.so
 system/lib/librm31080.so
 system/vendor/lib/libWVStreamControlAPI_L1.so
 system/vendor/lib/libwvm.so
+system/vendor/lib/mediadrm/libwvdrmengine.so
+system/vendor/lib/mediadrm/libdrmclearkeyplugin.so
 system/vendor/lib/drm/libdrmwvmplugin.so
+system/vendor/lib/libdrmdecrypt.so
 system/vendor/lib/libwvdrm_L1.so
 system/vendor/firmware/bcm43241/fw_bcmdhd_p2p.bin
 system/vendor/firmware/bcm43241/fw_bcmdhd.bin
