@@ -38,7 +38,6 @@ system/lib/hw/audio_policy.tegra.so
 system/lib/hw/power.default.so
 system/lib/hw/sensors.macallan.so
 system/lib/hw/nfc.tegra.so
-system/lib/hw/lights.macallan.so
 system/lib/libnvaviparserhal.so
 system/lib/nvcms/device.cfg
 system/lib/libnvmmlite_audio.so
