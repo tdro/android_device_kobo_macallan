@@ -11,6 +11,7 @@ system/lib/libnvomxilclient.so
 system/lib/libwlbwservice.so
 system/lib/libtsec_wrapper.so
 system/lib/libnvmmlite_utils.so
+system/lib/libsecure_hdcp_up.so
 system/lib/libinvensense_hal.so
 system/lib/libnvmm_audio.so
 system/lib/libnvmm_writer.so
@@ -18,7 +19,6 @@ system/lib/libnvopt_dvm.so
 system/lib/libnvodm_misc.so
 system/lib/libnvwsi.so
 system/lib/egl/libGLESv1_CM_tegra_impl.so
-system/lib/egl/egl.cfg
 system/lib/egl/libEGL_tegra_impl.so
 system/lib/egl/libGLESv2_tegra_impl.so
 system/lib/egl/libEGL_tegra.so
