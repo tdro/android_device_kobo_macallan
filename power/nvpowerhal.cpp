@@ -345,10 +345,14 @@ void common_power_set_interactive(__attribute__ ((unused)) struct power_module *
     sysfs_write("/sys/devices/system/cpu/cpu0/cpufreq/scaling_governor",
         (on == 0)?"conservative":"interactive");
 #else // Tegra K1
-    sysfs_write("/sys/devices/system/cpu/cpufreq/interactive/hispeed_freq", (on == 0)?"420000":"624000");
-    sysfs_write("/sys/devices/system/cpu/cpufreq/interactive/target_loads", (on == 0)?"45 312000:75 564000:85":"65 228000:75 624000:85");
-    sysfs_write("/sys/devices/system/cpu/cpufreq/interactive/above_hispeed_delay", (on == 0)?"80000":"19000");
+    sysfs_write("/sys/devices/system/cpu/cpufreq/interactive/hispeed_freq", (on == 0)?"696000":"1122000");
+    sysfs_write("/sys/devices/system/cpu/cpufreq/interactive/target_loads", (on == 0)?"45 714000:55 816000:65 918000:75":"75 306000:85 696000:90 1606000:95");
+    sysfs_write("/sys/devices/system/cpu/cpufreq/interactive/above_hispeed_delay", (on == 0)?"20000":"20000 1606000:80000");
     sysfs_write("/sys/devices/system/cpu/cpufreq/interactive/timer_rate", (on == 0)?"300000":"20000");
+    sysfs_write("/sys/kernel/debug/clock/override.c2bus/state", (on == 0)?"0":"1");
+    sysfs_write("/sys/kernel/debug/clock/override.c2bus/rate", (on == 0)?"240000000":"600000000");
+    sysfs_write("/sys/kernel/debug/clock/override.c3bus/state", (on == 0)?"0":"1");
+    sysfs_write("/sys/kernel/debug/clock/override.c3bus/rate", (on == 0)?"204000000":"408000000");
 #endif
 }
 
