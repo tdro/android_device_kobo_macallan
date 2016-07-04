@@ -19,6 +19,7 @@ system/lib/libnvopt_dvm.so
 system/lib/libnvodm_misc.so
 system/lib/libnvwsi.so
 system/lib/egl/libGLESv1_CM_tegra_impl.so
+system/lib/egl/egl.cfg
 system/lib/egl/libEGL_tegra_impl.so
 system/lib/egl/libGLESv2_tegra_impl.so
 system/lib/egl/libEGL_tegra.so
@@ -46,7 +47,6 @@ system/lib/libnvglsi.so
 system/lib/libnvparser.so
 system/lib/libnvtnr.so
 system/lib/libnvhdmi3dplay_jni.so
-system/lib/libussrd.so
 system/lib/libnvmm_camera.so
 system/lib/libnvstitching.so
 system/lib/libnvblit.so
@@ -172,6 +172,7 @@ system/etc/permissions/com.nvidia.miracast.xml
 system/bin/wifi_loader.sh
 system/bin/nvcap_test
 system/bin/set_hwui_params.sh
+system/bin/tegrastats
 system/bin/alsa_aplay
 system/bin/tinyplay
 system/bin/alsa_ctl
