@@ -2,6 +2,8 @@
 # tdro@github.com
 #
 
+#COMMON_GLOBAL_CFLAGS += -DADD_LEGACY_MEMORY_DEALER_CONSTRUCTOR_SYMBOL
+
 # Inherit From Proprietary Version
 -include vendor/kobo/macallan/BoardConfigVendor.mk
 
