@@ -183,6 +183,7 @@ system/bin/nv_hciattach
 system/bin/nvcgcserver
 system/bin/alsa_amixer
 system/bin/wlbwservice
+system/bin/dnsmasq
 system/bin/tinycap
 system/bin/ussr_setup.sh
 system/bin/nvtest
