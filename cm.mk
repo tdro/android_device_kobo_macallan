@@ -1,6 +1,7 @@
 #
 # tdro@github.com
 #
+
 # Boot Animation
 TARGET_BOOTANIMATION_HALF_RES := true
 TARGET_SCREEN_HEIGHT := 1600

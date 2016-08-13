@@ -1,7 +1,7 @@
 diff --git a/icu4c/source/common/ucnv.c b/icu4c/source/common/ucnv.c
 index 5cf4d15..3701f30 100644
---- a/icu4c/source/common/ucnv.c
-+++ b/icu4c/source/common/ucnv.c
+--- a/external/icu/icu4c/source/common/ucnv.c
++++ b/external/icu/icu4c/source/common/ucnv.c
 @@ -2893,6 +2893,75 @@ ucnv_isFixedWidth(UConverter *cnv, UErrorCode *status){
              return FALSE;
      }

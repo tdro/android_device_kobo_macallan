@@ -33,15 +33,15 @@ PRODUCT_COPY_FILES += \
 	device/kobo/macallan/init/init.recovery.macallan.rc:root/init.recovery.macallan.rc \
 	device/kobo/macallan/init/init.tf.rc:root/init.tf.rc
 
-# Adb Keys
+# Android Debugging Keys
 PRODUCT_COPY_FILES += \
 	device/kobo/macallan/adb_keys:root/adb_keys
 
-# Audio Override
-PRODUCT_COPY_FILES_OVERRIDES := \
-	system/etc/audio_policy.conf \
-	system/etc/media_codecs.xml \
-	system/etc/media_profiles.xml
+# Media Files	
+PRODUCT_COPY_FILES += \
+	device/kobo/macallan/system/etc/audio_policy.conf:system/etc/audio_policy.conf \
+	device/kobo/macallan/system/etc/media_codecs.xml:system/etc/media_codecs.xml \
+	device/kobo/macallan/system/etc/media_profiles.xml:system/etc/media_profiles.xml
 
 # Hardware Specific Features
 PRODUCT_COPY_FILES += \
@@ -49,7 +49,7 @@ PRODUCT_COPY_FILES += \
 	frameworks/native/data/etc/android.hardware.camera.autofocus.xml:system/etc/permissions/android.hardware.camera.autofocus.xml \
 	frameworks/native/data/etc/android.hardware.camera.front.xml:system/etc/permissions/android.hardware.camera.front.xml \
 	frameworks/native/data/etc/android.hardware.camera.xml:system/etc/permissions/android.hardware.camera.xml \
-	frameworks/native/data/etc/android.hardware.location.xml:system/etc/permissions/android.hardware.location.xml \
+	frameworks/native/data/etc/android.hardware.location.gps.xml:system/etc/permissions/android.hardware.location.gps.xml \
 	frameworks/native/data/etc/android.hardware.wifi.xml:system/etc/permissions/android.hardware.wifi.xml \
 	frameworks/native/data/etc/android.hardware.wifi.direct.xml:system/etc/permissions/android.hardware.wifi.direct.xml \
 	frameworks/native/data/etc/android.hardware.bluetooth_le.xml:system/etc/permissions/android.hardware.bluetooth_le.xml \
@@ -61,7 +61,6 @@ PRODUCT_COPY_FILES += \
 	frameworks/native/data/etc/android.software.sip.voip.xml:system/etc/permissions/android.software.sip.voip.xml \
 	frameworks/native/data/etc/android.hardware.usb.accessory.xml:system/etc/permissions/android.hardware.usb.accessory.xml \
 	frameworks/native/data/etc/android.hardware.usb.host.xml:system/etc/permissions/android.hardware.usb.host.xml \
-	frameworks/native/data/etc/android.hardware.ethernet.xml:system/etc/permissions/android.hardware.ethernet.xml \
 	packages/wallpapers/LivePicker/android.software.live_wallpaper.xml:system/etc/permissions/android.software.live_wallpaper.xml
 
 # Default Overrides
@@ -86,9 +85,6 @@ PRODUCT_PACKAGES += \
 	audio.a2dp.default \
 	audio.usb.default \
 	audio.r_submix.default
-
-# Power
-PRODUCT_PACKAGES += power.tegra
 
 # Build Configs
 PRODUCT_CHARACTERISTICS := tablet,nosdcard

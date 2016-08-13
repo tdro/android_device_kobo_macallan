@@ -31,6 +31,13 @@
 #include <hardware/lights.h>
 #include <hardware/hardware.h>
 
+#define DELAY 1500
+#define SYS_PATH_BL_BRIGHTNESS "/sys/class/backlight/pwm-backlight/brightness"
+#define SYS_PATH_LED_BRIGHTNESS "/sys/class/leds/white_led_en1/brightness"
+#define SYS_PATH_LED_TRIGGER "/sys/class/leds/white_led_en1/trigger"
+#define SYS_PATH_LED_ON "/sys/class/leds/white_led_en1/delay_on"
+#define SYS_PATH_LED_OFF "/sys/class/leds/white_led_en1/delay_off"
+
 static pthread_mutex_t g_lock = PTHREAD_MUTEX_INITIALIZER;
 
 static int write_int(char const *path, int value)
@@ -53,6 +60,43 @@ static int write_int(char const *path, int value)
     }
 }
 
+static int write_string(char const *path, char const *str)
+{
+    int fd;
+    static int already_warned = -1;
+    int bytes = strlen(str);
+    fd = open(path, O_RDWR);
+    if (fd >= 0) {
+        int amt = write(fd, str, bytes);
+        close(fd);
+        return amt == -1 ? -errno : 0;
+    } else {
+        if (already_warned == -1) {
+            ALOGE("write_string failed to open %s\n", path);
+            already_warned = 1;
+        }
+        return -errno;
+    }
+}
+
+static int read_string(char const *path, char *str, int n)
+{
+    int fd;
+    static int already_warned = -1;
+    fd = open(path, O_RDONLY | O_NONBLOCK);
+    if (fd >= 0) {
+        int amt = read(fd, str, n);
+        close(fd);
+        return amt == -1 ? -errno : 0;
+    } else {
+        if (already_warned == -1) {
+            ALOGE("write_string failed to open %s\n", path);
+            already_warned = 1;
+        }
+        return -errno;
+    }
+}
+
 static int rgb_to_brightness(struct light_state_t const *state)
 {
     int color = state->color & 0x00ffffff;
@@ -62,18 +106,38 @@ static int rgb_to_brightness(struct light_state_t const *state)
 }
 
 static int set_light_backlight(struct light_device_t *dev,
-                   struct light_state_t const *state)
+        struct light_state_t const *state)
 {
     int err = 0;
     int brightness = rgb_to_brightness(state);
 
     pthread_mutex_lock(&g_lock);
-    err = write_int("/sys/class/backlight/pwm-backlight/brightness",
-            brightness);
+    err = write_int(SYS_PATH_BL_BRIGHTNESS, brightness);
     pthread_mutex_unlock(&g_lock);
 
     return err;
 }
+
+static int set_light_notifications(struct light_device_t *dev,
+            struct light_state_t const *state)
+{
+    int err = 0;
+    int i = 0;
+    int mode = state->flashMode;
+    int on = state->flashOnMS;
+    int off = state->flashOffMS;
+    int brightness = 255;
+
+    pthread_mutex_lock(&g_lock);
+
+    write_int(SYS_PATH_LED_BRIGHTNESS, brightness);
+    write_string(SYS_PATH_LED_TRIGGER, "timer");
+    
+    pthread_mutex_unlock(&g_lock);
+    return err;
+}
+
+
 
 /** Close the lights device */
 static int close_lights(struct light_device_t *dev)
@@ -85,7 +149,7 @@ static int close_lights(struct light_device_t *dev)
 
 /** Open a new instance of a lights device using name */
 static int open_lights(const struct hw_module_t *module, char const *name,
-               struct hw_device_t **device)
+        struct hw_device_t **device)
 {
     pthread_t lighting_poll_thread;
 
@@ -127,7 +191,7 @@ struct hw_module_t HAL_MODULE_INFO_SYM =
     .version_major = 1,
     .version_minor = 0,
     .id = LIGHTS_HARDWARE_MODULE_ID,
-    .name = "NVIDIA Tegratab lights module",
+    .name = "NVIDIA Macallan Lights Module",
     .author = "NVIDIA",
     .methods = &lights_methods,
 };
