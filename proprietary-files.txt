@@ -169,6 +169,7 @@ system/etc/nvaudio_conf.xml
 system/etc/audio_effects.conf
 system/etc/permissions/com.nvidia.nvsi.xml
 system/etc/permissions/com.nvidia.miracast.xml
+system/bin/input_cfboost_init.sh
 system/bin/wifi_loader.sh
 system/bin/nvcap_test
 system/bin/set_hwui_params.sh
