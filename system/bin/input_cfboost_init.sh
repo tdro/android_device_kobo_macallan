@@ -23,7 +23,7 @@ WRITE_BOOST_FREQ="/sys/module/input_cfboost/parameters/boost_freq"
 WRITE_BOOST_TIME="/sys/module/input_cfboost/parameters/boost_time"
 
 # defaults
-FREQ_KHZ=918000
+FREQ_KHZ=1122000
 TIME_MS=500
 
 
