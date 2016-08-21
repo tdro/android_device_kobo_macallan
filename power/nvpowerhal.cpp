@@ -346,10 +346,10 @@ void common_power_set_interactive(__attribute__ ((unused)) struct power_module *
         (on == 0)?"conservative":"interactive");
 #else // Tegra K1
     sysfs_write("/sys/devices/system/cpu/cpufreq/interactive/hispeed_freq", (on == 0)?"696000":"306000");
-    sysfs_write("/sys/devices/system/cpu/cpufreq/interactive/target_loads", (on == 0)?"45 714000:55 816000:65 918000:75":"65 1224000:75 1428000:80 1606000:85");
-    sysfs_write("/sys/devices/system/cpu/cpufreq/interactive/above_hispeed_delay", (on == 0)?"80000":"20000");
+    sysfs_write("/sys/devices/system/cpu/cpufreq/interactive/target_loads", (on == 0)?"45 714000:55 816000:65 918000:75":"80 1606000:90 1810500:99");
+    sysfs_write("/sys/devices/system/cpu/cpufreq/interactive/above_hispeed_delay", (on == 0)?"80000":"20000 918000:60000 1122000:150000");
     sysfs_write("/sys/devices/system/cpu/cpufreq/interactive/timer_rate", (on == 0)?"300000":"20000");
-    sysfs_write("/sys/devices/system/cpu/cpufreq/interactive/min_sample_time", (on == 0)?"40000":"20000");
+    sysfs_write("/sys/devices/system/cpu/cpufreq/interactive/min_sample_time", (on == 0)?"40000":"60000");
     sysfs_write("/sys/devices/system/cpu/cpufreq/interactive/sampling_down_factor", (on == 0)?"0":"100000");
     sysfs_write("/sys/devices/system/cpu/cpufreq/interactive/io_is_busy", (on == 0)?"0":"1");
     sysfs_write("/sys/devices/system/cpu/cpufreq/interactive/go_hispeed_load", (on == 0)?"99":"99");
