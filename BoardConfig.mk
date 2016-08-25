@@ -2,7 +2,7 @@
 # tdro@github.com
 #
 
-#COMMON_GLOBAL_CFLAGS += -DADD_LEGACY_MEMORY_DEALER_CONSTRUCTOR_SYMBOL
+# COMMON_GLOBAL_CFLAGS += -DADD_LEGACY_MEMORY_DEALER_CONSTRUCTOR_SYMBOL
 
 # Inherit From Proprietary Version
 -include vendor/kobo/macallan/BoardConfigVendor.mk
@@ -68,6 +68,8 @@ TW_BRIGHTNESS_PATH := "/sys/class/backlight/pwm-backlight/brightness"
 TW_CUSTOM_BATTERY_PATH := "/sys/class/power_supply/bq27541-bat"
 TARGET_USE_CUSTOM_LUN_FILE_PATH := "/sys/class/android_usb/f_mass_storage/lun/file"
 TARGET_RECOVERY_INITRC := device/kobo/macallan/recovery/init.rc
+
+MALLOC_IMPL := dlmalloc
 
 # Wifi
 WPA_SUPPLICANT_VERSION := VER_0_8_X
