@@ -69,8 +69,6 @@ TW_CUSTOM_BATTERY_PATH := "/sys/class/power_supply/bq27541-bat"
 TARGET_USE_CUSTOM_LUN_FILE_PATH := "/sys/class/android_usb/f_mass_storage/lun/file"
 TARGET_RECOVERY_INITRC := device/kobo/macallan/recovery/init.rc
 
-MALLOC_IMPL := dlmalloc
-
 # Wifi
 WPA_SUPPLICANT_VERSION := VER_0_8_X
 BOARD_WPA_SUPPLICANT_DRIVER := NL80211
