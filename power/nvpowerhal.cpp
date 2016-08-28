@@ -355,10 +355,6 @@ void common_power_set_interactive(__attribute__ ((unused)) struct power_module *
     sysfs_write("/sys/devices/system/cpu/cpufreq/interactive/go_hispeed_load", (on == 0)?"99":"0");
     sysfs_write("/sys/devices/system/cpu/cpuquiet/tegra_cpuquiet/down_delay", (on == 0)?"1000":"2000");
     sysfs_write("/sys/devices/system/cpu/cpuquiet/tegra_cpuquiet/no_lp", (on == 0)?"0":"1");
-    sysfs_write("/sys/kernel/debug/clock/override.c2bus/state", (on == 0)?"0":"1");
-    sysfs_write("/sys/kernel/debug/clock/override.c2bus/rate", (on == 0)?"240000000":"672000000");
-    sysfs_write("/sys/kernel/debug/clock/override.c3bus/state", (on == 0)?"0":"0");
-    sysfs_write("/sys/kernel/debug/clock/override.c3bus/rate", (on == 0)?"204000000":"408000000");
 #endif
 }
 
