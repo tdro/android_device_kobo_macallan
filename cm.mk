@@ -20,5 +20,5 @@ $(call inherit-product, vendor/cm/config/common_full_tablet_wifionly.mk)
 PRODUCT_DEVICE := macallan
 PRODUCT_NAME := cm_macallan
 PRODUCT_BRAND := kobo
-PRODUCT_MODEL := Kobo Arc 10HD
+PRODUCT_MODEL := Arc 10HD
 PRODUCT_MANUFACTURER := Kobo
