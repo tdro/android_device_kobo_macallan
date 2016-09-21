@@ -76,12 +76,12 @@ Only the three quirks included above are recognized at this point:
 -->
 
 <MediaCodecs>
+    
     <Decoders>
         <MediaCodec name="OMX.Nvidia.mp4.decode" type="video/mp4v-es" />
         <MediaCodec name="OMX.Nvidia.h263.decode" type="video/3gpp" />
         <MediaCodec name="OMX.Nvidia.h264.decode" type="video/avc" />
         <MediaCodec name="OMX.Nvidia.mp3.decoder" type="audio/mpeg" />
-        <MediaCodec name="OMX.Nvidia.h264.decode.secure" type="video/avc" />
         <MediaCodec name="OMX.Nvidia.mp3.decoder" type="audio/mpeg-L2" />
         <MediaCodec name="OMX.Nvidia.mjpeg.decoder" type="video/mjpeg" />
         <MediaCodec name="OMX.Nvidia.vp8.decode" type="video/x-vnd.on2.vp8" />
@@ -90,8 +90,10 @@ Only the three quirks included above are recognized at this point:
     <Encoders>
         <MediaCodec name="OMX.Nvidia.h264.encoder" type="video/avc" />
     </Encoders>
+    
     <Include href="media_codecs_google_audio.xml" />
     <Include href="media_codecs_google_telephony.xml" />
     <Include href="media_codecs_google_video.xml" />
     <Include href="media_codecs_ffmpeg.xml" />
+    
 </MediaCodecs>
