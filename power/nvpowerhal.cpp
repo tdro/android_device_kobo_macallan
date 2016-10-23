@@ -294,20 +294,18 @@ void common_power_set_interactive(__attribute__ ((unused)) struct power_module *
         (on == 0)?"conservative":"interactive");
 #else // Tegra K1
     sysfs_write("/sys/devices/system/cpu/cpu0/cpufreq/scaling_min_freq", (on == 0)?"51000":"306000");
-    sysfs_write("/sys/devices/system/cpu/cpufreq/interactive/hispeed_freq", (on == 0)?"696000":"1224000");
-    sysfs_write("/sys/devices/system/cpu/cpufreq/interactive/target_loads", (on == 0)?"45 714000:55 816000:65 918000:75":"99");
     sysfs_write("/sys/devices/system/cpu/cpufreq/interactive/above_hispeed_delay", (on == 0)?"80000":"15000");
-    sysfs_write("/sys/devices/system/cpu/cpufreq/interactive/timer_rate", (on == 0)?"300000":"15000");
-    sysfs_write("/sys/devices/system/cpu/cpufreq/interactive/timer_slack", (on == 0)?"80000":"60000");
-    sysfs_write("/sys/devices/system/cpu/cpufreq/interactive/min_sample_time", (on == 0)?"40000":"60000");
-    sysfs_write("/sys/devices/system/cpu/cpufreq/interactive/sampling_down_factor", (on == 0)?"0":"100000");
-    sysfs_write("/sys/devices/system/cpu/cpufreq/interactive/io_is_busy", (on == 0)?"0":"0");
-    sysfs_write("/sys/devices/system/cpu/cpufreq/interactive/go_hispeed_load", (on == 0)?"99":"65");
-    sysfs_write("/sys/devices/system/cpu/cpuquiet/tegra_cpuquiet/down_delay", (on == 0)?"1000":"1500");
+    sysfs_write("/sys/devices/system/cpu/cpufreq/interactive/go_hispeed_load", (on == 0)?"99":"0");
+    sysfs_write("/sys/devices/system/cpu/cpufreq/interactive/hispeed_freq", (on == 0)?"696000":"306000");
+    sysfs_write("/sys/devices/system/cpu/cpufreq/interactive/io_is_busy", (on == 0)?"0":"1");
+    sysfs_write("/sys/devices/system/cpu/cpufreq/interactive/min_sample_time", (on == 0)?"80000":"400000");
+    sysfs_write("/sys/devices/system/cpu/cpufreq/interactive/target_loads", (on == 0)?"45 714000:55 816000:65 918000:75":"95");
+    sysfs_write("/sys/devices/system/cpu/cpufreq/interactive/timer_rate", (on == 0)?"300000":"10000");
+    sysfs_write("/sys/devices/system/cpu/cpufreq/interactive/timer_slack", (on == 0)?"80000":"5000");
     sysfs_write("/sys/devices/system/cpu/cpuquiet/tegra_cpuquiet/no_lp", (on == 0)?"0":"1");
+    sysfs_write("/sys/devices/system/cpu/cpuquiet/balanced/up_delay", (on == 0)?"70":"1");
+    sysfs_write("/sys/devices/system/cpu/cpuquiet/balanced/core_bias", (on == 0)?"2":"1");
     sysfs_write("/sys/kernel/debug/clock/override.c2bus/state", (on == 0)?"0":"1");
-    sysfs_write("/sys/kernel/debug/clock/override.c3bus/state", (on == 0)?"0":"1");
-    sysfs_write("/sys/kernel/debug/clock/override.c3bus/rate", (on == 0)?"204000000":"408000000");
 #endif
 }
 
