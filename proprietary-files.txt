@@ -119,11 +119,10 @@ system/vendor/lib/mediadrm/libwvdrmengine.so
 system/vendor/lib/mediadrm/libdrmclearkeyplugin.so
 system/vendor/lib/drm/libdrmwvmplugin.so
 system/vendor/lib/libdrmdecrypt.so
+system/vendor/lib/liboemcrypto.so
 system/vendor/lib/libwvdrm_L1.so
-system/vendor/firmware/bcm43241/fw_bcmdhd_p2p.bin
 system/vendor/firmware/bcm43241/fw_bcmdhd.bin
 system/vendor/firmware/bcm43241/fw_bcmdhd_EVT.bin
-system/vendor/firmware/bcm43241/fw_bcmdhd_apsta.bin
 system/vendor/pittpatt/models/recognition/face.face.y0-y0-22-b-N/full_model.bin
 system/vendor/pittpatt/models/detection/multi_pose_face_landmark_detectors.7/nose_base-y0-yi45-p0-pi45-r0-ri20.lg_32/full_model.bin
 system/vendor/pittpatt/models/detection/multi_pose_face_landmark_detectors.7/left_eye-y0-yi45-p0-pi45-r0-ri20.lg_32/full_model.bin
@@ -134,6 +133,7 @@ system/vendor/pittpatt/models/detection/yaw_roll_face_detectors.6/head-y0-yi45-p
 system/vendor/etc/fallback_fonts.xml
 system/etc/firmware/nvavp_os_eff00000.bin
 system/etc/firmware/nvavp_aud_ucode.bin
+system/etc/firmware/nvavp_vid_ucode.bin
 system/etc/firmware/tegra11x/nvhost_msenc02.fw
 system/etc/firmware/tegra11x/nvhost_tsec.fw
 system/etc/firmware/bcm43241_EVT.hcd
@@ -150,6 +150,9 @@ system/etc/enctune.conf
 system/etc/asound.conf
 system/etc/nvram_43241_US.txt
 system/etc/audioConfig_qvoice_icera_pc400.xml
+system/etc/hdcpsrm/hdcp2x.srm
+system/etc/hdcpsrm/hdcp2xtest.srm
+system/etc/hdcpsrm/hdcp1x.srm
 system/etc/nvram_43241_ALL.txt
 system/etc/nvram_43241_EVT.txt
 system/etc/model_frontal.xml
