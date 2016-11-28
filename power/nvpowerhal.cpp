@@ -298,14 +298,16 @@ void common_power_set_interactive(__attribute__ ((unused)) struct power_module *
     sysfs_write("/sys/devices/system/cpu/cpufreq/interactive/go_hispeed_load", (on == 0)?"99":"0");
     sysfs_write("/sys/devices/system/cpu/cpufreq/interactive/hispeed_freq", (on == 0)?"696000":"306000");
     sysfs_write("/sys/devices/system/cpu/cpufreq/interactive/io_is_busy", (on == 0)?"0":"1");
-    sysfs_write("/sys/devices/system/cpu/cpufreq/interactive/min_sample_time", (on == 0)?"80000":"400000");
-    sysfs_write("/sys/devices/system/cpu/cpufreq/interactive/target_loads", (on == 0)?"45 714000:55 816000:65 918000:75":"95");
-    sysfs_write("/sys/devices/system/cpu/cpufreq/interactive/timer_rate", (on == 0)?"300000":"10000");
-    sysfs_write("/sys/devices/system/cpu/cpufreq/interactive/timer_slack", (on == 0)?"80000":"5000");
-    sysfs_write("/sys/devices/system/cpu/cpuquiet/tegra_cpuquiet/no_lp", (on == 0)?"0":"1");
-    sysfs_write("/sys/devices/system/cpu/cpuquiet/balanced/up_delay", (on == 0)?"70":"1");
-    sysfs_write("/sys/devices/system/cpu/cpuquiet/balanced/core_bias", (on == 0)?"2":"1");
+    sysfs_write("/sys/devices/system/cpu/cpufreq/interactive/min_sample_time", (on == 0)?"80000":"60000");
+    sysfs_write("/sys/devices/system/cpu/cpufreq/interactive/target_loads", (on == 0)?"99":"99");
+    sysfs_write("/sys/devices/system/cpu/cpufreq/interactive/timer_rate", (on == 0)?"300000":"15000");
+    sysfs_write("/sys/devices/system/cpu/cpufreq/interactive/timer_slack", (on == 0)?"80000":"60000");
     sysfs_write("/sys/kernel/debug/clock/override.c2bus/state", (on == 0)?"0":"1");
+    sysfs_write("/sys/module/autosmp/parameters/enabled", (on == 0)?"N":"Y");
+    sysfs_write("/sys/devices/system/cpu/cpu1/online", (on == 0)?"0":"1");
+    sysfs_write("/sys/devices/system/cpu/cpu2/online", (on == 0)?"0":"");
+    sysfs_write("/sys/devices/system/cpu/cpu3/online", (on == 0)?"0":"");
+    sysfs_write("/sys/kernel/cluster/active", (on == 0)?"LP":"");
 #endif
 }
 
