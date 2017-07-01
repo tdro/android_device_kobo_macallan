@@ -14,6 +14,7 @@ ro.sf.lcd_density=320
 ro.zygote.disable_gl_preload=true
 
 # Other
+ro.product.display=Arc 10HD
 drm.service.enabled=true
 debug.nfc.fw_download=false
 debug.nfc.se=false
